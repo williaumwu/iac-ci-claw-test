@@ -1,6 +1,6 @@
 # iac-ci-claw-test
 
-Test repository for iac-ci pipeline validation. Contains 4 independent Terraform modules deployed to eu-west-1.
+Test repository for iac-ci pipeline validation. Contains 4 independent Terraform modules deployed to us-west-2.
 
 ## Modules
 
