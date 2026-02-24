@@ -1,0 +1,11 @@
+version: 1
+settings:
+  tf_runtime: "tofu:1.8"
+  job_timeout: 1800
+  poll_interval: 30
+pipelines:
+  full:
+    - terraform/vpc
+    - terraform/codebuild
+    - terraform/api-gateway
+    - terraform/s3-cloudfront

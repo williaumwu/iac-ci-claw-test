@@ -1,0 +1,3 @@
+version: 1
+settings:
+  tf_runtime: "tofu:1.8"
