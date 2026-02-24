@@ -15,6 +15,7 @@ locals {
   common_tags = {
     Project     = "iac-ci-claw-test"
     Environment = "test"
+    ManagedBy   = "opentofu"
   }
 }
 
