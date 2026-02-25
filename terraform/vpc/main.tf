@@ -28,7 +28,8 @@ resource "aws_vpc" "this" {
   enable_dns_hostnames = true
 
   tags = merge(local.common_tags, {
-    Name = "${var.project_name}-vpc"
+    Name        = "${var.project_name}-vpc"
+    Description = "Main VPC for iac-ci-claw-test"
   })
 }
 
