@@ -95,7 +95,7 @@ resource "aws_eip" "nat" {
 }
 
 ################################################################################
-# NAT Gateway (single AZ for cost optimisation)
+# NAT Gateway (single AZ for cost optimization)
 ################################################################################
 
 resource "aws_nat_gateway" "this" {
