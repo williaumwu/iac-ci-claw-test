@@ -35,6 +35,12 @@ resource "aws_ssm_parameter" "github_token" {
   value = var.github_token
 }
 
+resource "aws_ssm_parameter" "infracost_api_key" {
+  name  = "/iac-ci/infracost-api-key"
+  type  = "SecureString"
+  value = var.infracost_api_key
+}
+
 resource "aws_dynamodb_table_item" "repo_registration" {
   table_name = "iac-ci-settings"
   hash_key   = "trigger_id"
@@ -46,6 +52,7 @@ resource "aws_dynamodb_table_item" "repo_registration" {
     secret                   = { S = random_password.webhook_secret.result }
     ssm_iac_ci_github_token  = { S = "/iac-ci/github-token" }
     aws_default_region       = { S = "eu-west-1" }
+    ssm_infracost_api_key    = { S = "/iac-ci/infracost-api-key" }
     engine_api_url           = { S = "" }
     engine_webhook_secret    = { S = "" }
   })
@@ -56,7 +63,7 @@ resource "github_repository_webhook" "iac_ci" {
 
   configuration {
     url          = "https://7or7bxpoe2.execute-api.eu-west-1.amazonaws.com/webhook/iac-ci-claw-test"
-    content_type = "application/json"
+    content_type = "json"
     secret       = random_password.webhook_secret.result
     insecure_ssl = false
   }
