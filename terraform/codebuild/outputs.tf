@@ -1,3 +1,4 @@
+# test auto-plan trigger
 output "project_name" {
   description = "Name of the CodeBuild project."
   value       = aws_codebuild_project.this.name
