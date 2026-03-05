@@ -3,6 +3,6 @@ terraform {
 }
 
 resource "local_file" "monitoring_placeholder" {
-  content  = "monitoring placeholder"
+  content  = "monitoring placeholder v2"
   filename = "${path.module}/output.txt"
 }
