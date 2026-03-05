@@ -25,3 +25,5 @@ tofu apply
 ## Pipeline
 
 The `.iac_ci/config.yaml` at the repo root defines the full pipeline order.
+
+<!-- test explicit-plan -->
