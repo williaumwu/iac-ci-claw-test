@@ -9,3 +9,12 @@ pipelines:
     - terraform/codebuild
     - terraform/api-gateway
     - terraform/s3-cloudfront
+  extended:
+    - terraform/vpc
+    - terraform/codebuild
+    - terraform/api-gateway
+    - terraform/s3-cloudfront
+    - terraform/iam-roles
+    - terraform/monitoring
+    - terraform/networking
+    - terraform/onboarding

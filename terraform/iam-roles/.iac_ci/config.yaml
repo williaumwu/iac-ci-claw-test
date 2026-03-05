@@ -1,0 +1,2 @@
+version: 1
+tf_runtime: "tofu:1.8"
