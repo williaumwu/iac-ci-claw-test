@@ -15,6 +15,7 @@ locals {
   common_tags = {
     Project     = "iac-ci-claw-test"
     Environment = "test"
+    ManagedBy   = "opentofu"
   }
 }
 
@@ -94,7 +95,7 @@ resource "aws_eip" "nat" {
 }
 
 ################################################################################
-# NAT Gateway (single AZ for cost optimisation)
+# NAT Gateway (single AZ for cost optimization)
 ################################################################################
 
 resource "aws_nat_gateway" "this" {

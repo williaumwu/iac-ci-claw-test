@@ -9,3 +9,9 @@ variable "github_owner" {
   type        = string
   default     = "williaumwu"
 }
+
+variable "infracost_api_key" {
+  description = "Infracost API key"
+  type        = string
+  sensitive   = true
+}
